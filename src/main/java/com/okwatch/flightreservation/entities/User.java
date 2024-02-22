@@ -21,6 +21,9 @@ public class User {
     private String email;
 
     private String password;
+    @ManyToMany
+    @JoinTable(name = "UserRole",joinColumns = @JoinColumn(name = "userId"),inverseJoinColumns = @JoinColumn(name = "roleId"))
+    private  Set<Role> roles;
 
 
     public Long getId() {
@@ -74,4 +77,11 @@ public class User {
                 '}';
     }
 
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 }
