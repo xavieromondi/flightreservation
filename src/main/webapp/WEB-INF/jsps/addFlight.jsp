@@ -10,5 +10,31 @@
 <body>
 <h2>Add flight</h2>
 
+<form action="reservation/saveFlight" method="post">
+
+    <pre>
+    <label for="departureCity">Departure City:</label><br>
+    <input type="text" id="departureCity" name="departureCity"><br>
+
+    <label for="arrivalCity">Arrival City:</label><br>
+    <input type="text" id="arrivalCity" name="arrivalCity"><br>
+
+    <label for="dateOfDeparture">Date of Departure:</label><br>
+    <input type="text" id="dateOfDeparture" name="dateOfDeparture"><br>
+
+
+    <label for="estimatedDepartureTime">Estimated Departure Time:</label><br>
+    <input type="text" id="estimatedDepartureTime" name="estimatedDepartureTime"><br><br>
+
+    <label for="flightNumber">Flight Number:</label><br>
+    <input type="text" id="flightNumber" name="flightNumber"><br>
+
+    <label for="operatingAirlines">Operating Airlines:</label><br>
+    <input type="text" id="operatingAirlines" name="operatingAirlines"><br>
+
+    <input type="submit" value="Save">
+    </pre>
+</form>
+
 </body>
 </html>

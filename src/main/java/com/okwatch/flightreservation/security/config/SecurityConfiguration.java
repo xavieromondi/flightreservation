@@ -35,7 +35,11 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/admin/showAddFlight").hasAuthority("ADMIN")
 
-                                .requestMatchers("/showReg", "/", "/index.html", "/registerUser", "/login", "/showLogin", "/login/*").permitAll().anyRequest().permitAll()
+
+
+                                .requestMatchers("/showReg", "/", "/index.html", "/registerUser", "/login", "/login/*","/reservation/saveFlight").permitAll().anyRequest().permitAll()
+
+
 
                 ).httpBasic(withDefaults())
                 .csrf(AbstractHttpConfigurer::disable);
