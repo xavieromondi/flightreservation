@@ -59,7 +59,6 @@ public class FlightController {
         flight1.setEstimatedDepartureTime(flight.getEstimatedDepartureTime());
         flight1.setOperatingAirlines(flight.getOperatingAirlines());
 
-
         flightRepository.save(flight1);
 
         modelMap.addAttribute("msg", "save successful");

@@ -1,40 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Flight</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #f8f9fa; /* Light Gray */
+            color: #343a40; /* Dark Gray */
+            padding: 20px;
+        }
+        h2 {
+            color: #007bff; /* Primary Blue */
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff; /* White */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da; /* Grayish */
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff; /* Primary Blue */
+            color: #fff; /* White */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Dark Blue */
+        }
+    </style>
 </head>
 <body>
-<h2>Add flight</h2>
+<div class="container">
+    <h2>Add Flight</h2>
+    <form action="reservation/saveFlight" method="post">
+        <label for="departureCity">Departure City:</label>
+        <input type="text" id="departureCity" name="departureCity" required>
 
-<form action="reservation/saveFlight" method="post">
+        <label for="arrivalCity">Arrival City:</label>
+        <input type="text" id="arrivalCity" name="arrivalCity" required>
 
-    <pre>
-    <label for="departureCity">Departure City:</label><br>
-    <input type="text" id="departureCity" name="departureCity"><br>
+        <label for="dateOfDeparture">Date of Departure:</label>
+        <input type="text" id="dateOfDeparture" name="dateOfDeparture" required>
 
-    <label for="arrivalCity">Arrival City:</label><br>
-    <input type="text" id="arrivalCity" name="arrivalCity"><br>
+        <label for="estimatedDepartureTime">Estimated Departure Time:</label>
+        <input type="text" id="estimatedDepartureTime" name="estimatedDepartureTime" required>
 
-    <label for="dateOfDeparture">Date of Departure:</label><br>
-    <input type="text" id="dateOfDeparture" name="dateOfDeparture"><br>
+        <label for="flightNumber">Flight Number:</label>
+        <input type="text" id="flightNumber" name="flightNumber" required>
 
+        <label for="operatingAirlines">Operating Airlines:</label>
+        <input type="text" id="operatingAirlines" name="operatingAirlines" required>
 
-    <label for="estimatedDepartureTime">Estimated Departure Time:</label><br>
-    <input type="text" id="estimatedDepartureTime" name="estimatedDepartureTime"><br><br>
-
-    <label for="flightNumber">Flight Number:</label><br>
-    <input type="text" id="flightNumber" name="flightNumber"><br>
-
-    <label for="operatingAirlines">Operating Airlines:</label><br>
-    <input type="text" id="operatingAirlines" name="operatingAirlines"><br>
-
-    <input type="submit" value="Save">
-    </pre>
-</form>
-
+        <input type="submit" value="Save">
+    </form>
+</div>
+<!-- Bootstrap JS (Optional if you need JS functionality) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
